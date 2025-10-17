@@ -64,7 +64,6 @@ imprimir_corto(char* copia_path, char* separador) {
 int
 main (int argc, char *argv[])
 {
-    //hola que tal
     char* path = getenv("PATH");
     if (!path || *path == '\0') {
         fprintf(stderr, "error: PATH no definida o vacía\n");
