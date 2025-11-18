@@ -60,6 +60,7 @@ printparameters(){
             continue;
         }
         printtypeinode(file_info);
+        
         printuid(file_info);
         printgid(file_info);
         printsize(file_info);
