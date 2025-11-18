@@ -42,7 +42,7 @@ printgid(struct stat file_info){
 
 void
 printsize(struct stat file_info){
-    printf("%lld  ", file_info.st_size);
+    printf("%lld  ", (long long)file_info.st_size);
 }
 
 void
@@ -55,7 +55,7 @@ printparameters(){
         err(EXIT_FAILURE, "can't open directory\n");
     }
     while ((directory_parameters = readdir(d)) != NULL ){
-        if (stat(directory_parameters->d_name, &file_info) == -1) {
+        if (lstat(directory_parameters->d_name, &file_info) == -1) {
             perror("stat");
             continue;
         }
