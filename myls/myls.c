@@ -16,33 +16,33 @@ void
 printtypeinode(struct stat file_info){
     switch (file_info.st_mode & S_IFMT) {
         case S_IFREG:
-            printf("f   ");
+            printf("f\t");
             break;
         case S_IFDIR:
-            printf("d   ");
+            printf("d\t");
             break;
         case S_IFLNK:
-            printf("l   ");
+            printf("l\t");
             break;
         default:
-            printf("o   ");
+            printf("o\t");
             break;
     }
 }
 
 void
 printuid(struct stat file_info){
-    printf("%d  ", file_info.st_uid);
+    printf("%d\t", file_info.st_uid);
 }
 
 void
 printgid(struct stat file_info){
-    printf("%d  ", file_info.st_gid);
+    printf("%d\t", file_info.st_gid);
 }
 
 void
 printsize(struct stat file_info){
-    printf("%lld  ", (long long)file_info.st_size);
+    printf("%lld\t", (long long)file_info.st_size);
 }
 
 void
