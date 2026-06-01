@@ -1,0 +1,5 @@
+gcc -g -c -Wall -Wshadow -Wvla -g miprograma.c
+
+gcc -g -o miprograma miprograma.o
+
+./miprograma
